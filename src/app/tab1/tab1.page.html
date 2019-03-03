@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      WhatsApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor='let chat of chats'>
+    <ion-item >
+      <ion-label>{{ chat.name }}</ion-label>
+      <a href="" [routerLink]="[chat.id]">
+        <ion-icon name="arrow-round-forward"></ion-icon>
+      </a>
+    </ion-item>     
+  </ion-list>    
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-button class="btn-list-box" color="success" shape="round" size="large" >
+        <ion-icon name="list-box" ></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+</ion-footer>
